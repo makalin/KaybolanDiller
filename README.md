@@ -40,14 +40,16 @@ See the full list of supported languages and dialects in [languages.md](./langua
 ## 🚧 Project Structure
 
 ```
-
 KaybolanDiller/
 ├── datasets/              # Rare language pair corpora
 ├── models/                # Pretrained and fine-tuned models
 ├── api/                   # FastAPI endpoints
 ├── webapp/                # SvelteKit frontend (dark theme)
 ├── notebooks/             # Jupyter notebooks for training
-├── requirements.txt
+├── tests/                 # Test suite and pytest configuration
+├── requirements.txt       # Python dependencies
+├── pytest.ini            # Pytest configuration
+├── .gitignore            # Git ignore rules
 └── README.md
 
 ```
