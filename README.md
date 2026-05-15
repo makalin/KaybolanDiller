@@ -56,10 +56,34 @@ KaybolanDiller/
 
 ---
 
-## 🌐 Demo (Coming Soon)
+## 🚀 Quick Start
 
-Stay tuned for a live web demo!  
-We aim to host the translator with open APIs and interactive UI.
+```bash
+# Backend
+python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+make api          # http://localhost:8000 — docs at /docs
+
+# Frontend (separate terminal)
+cd webapp && npm install && npm run dev   # http://localhost:5173
+
+# Tests
+make test
+```
+
+Set `USE_MOCK_TRANSLATION=false` in `.env` to use real Hugging Face models (requires download).
+
+### API Endpoints
+
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/api/health` | Service health & model status |
+| GET | `/api/languages` | All supported languages |
+| POST | `/api/translate` | Translate text |
+| POST | `/api/translate/batch` | Batch translation |
+| POST | `/api/detect` | Detect source language |
+| GET | `/api/models/{src}/{tgt}` | Models for a language pair |
 
 ---
 
